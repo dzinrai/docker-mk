@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/dzinrai/docker-mk#readme",
   "dependencies": {
+    "@hapi/joi": "^17.1.1",
     "@koa/router": "^9.3.1",
     "@paralect/node-mongo": "^2.0.0-beta.5",
     "koa": "^2.13.0",
