@@ -1,0 +1,27 @@
+{
+  "name": "docker-mk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dzinrai/docker-mk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dzinrai/docker-mk/issues"
+  },
+  "homepage": "https://github.com/dzinrai/docker-mk#readme",
+  "dependencies": {
+    "@koa/router": "^9.3.1",
+    "@paralect/node-mongo": "^2.0.0-beta.5",
+    "koa": "^2.13.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-generic-session": "^2.0.4",
+    "koa-mount": "^4.0.0"
+  }
+}
