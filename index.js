@@ -1,6 +1,6 @@
 let koa = require('koa');
 const Router = require('@koa/router');
-const connection = "mongodb://db/docker";
+const connection = "mongodb://mk-mongo/docker";
 const db = require('@paralect/node-mongo').connect(connection, function(err, db) {
   if (err) {
     throw err;

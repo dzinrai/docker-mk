@@ -1,20 +1,20 @@
 version: '3.6'
 services:
-  db:
+  mk-mongo:
     image: mongo:4.2
-    container_name: mongo
+    container_name: mk-mongo
     volumes:     
       - dbdata:/data/db
     networks:
-      - app-network
+      - mk-app-network
   nodejs:
     build: .
     ports:
       - "3071:3071"
     networks:
-      - app-network
+      - mk-app-network
     command: node index.js
 networks:
-  app-network:
+  mk-app-network:
 volumes:
   dbdata:
