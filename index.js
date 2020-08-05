@@ -1,13 +1,8 @@
 let koa = require('koa');
 const Router = require('@koa/router');
 const connection = "mongodb://mk-mongo/docker";
-const db = require('@paralect/node-mongo').connect(connection, function(err, db) {
-  if (err) {
-    throw err;
-  }
-  console.log('db connected');
-  db.close();
-});
+const db = require('@paralect/node-mongo').connect(connection);
+
 const usersService = db.createService('users');
 const logsService = db.createService('logs');
 
