@@ -26,22 +26,23 @@ async function handler(ctx) {
 
 router
   .get('/me', async (ctx, next) => {
-    ctx.body = usersService.findOne({});
+    ctx.body = await usersService.findOne({});
     return next();
   })
   .post('/logs', async (ctx, next) => {
     try {
       const value = await schema.validateAsync(ctx.request.body);
       console.log(value);
-      ctx.body = value;
-      logsService.create(value);
+      const val = await logsService.create(value);
+      console.log(val);
+      ctx.body = value; 
     } catch (e) {
       console.log(e);
     }
     return next();
   })
   .get('/logs', async (ctx, next) => {
-    ctx.body = logsService.find({});
+    ctx.body = await logsService.find({});
     return next();
   });
 
