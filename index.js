@@ -43,10 +43,6 @@ router
   .get('/logs', async (ctx, next) => {
     ctx.body = logsService.find({});
     return next();
-  })
-  .get('/', async (ctx, next) => {
-    ctx.body = usersService.find({});
-    return next();
   });
 
 app
